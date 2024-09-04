@@ -1,10 +1,14 @@
-import React from 'react';
-import { View, ImageBackground, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, ImageBackground, Text, TouchableOpacity } from 'react-native';
 import styles from './styles'; // Ensure styles are correctly imported
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import { responsiveHeight } from 'react-native-responsive-dimensions';
+import imagePath from '../../constants/imagePath';
+import ButtonComponent from '../../components/ButtonComponent';
+import navigationStrings from '../../constants/navigationStrings';
 
 const Login = ({ navigation }) => {
+    const [isvisible,SetIsvisible]=useState(false)
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -18,15 +22,29 @@ const Login = ({ navigation }) => {
                 <TextInputWithLabel 
                     label='Email Address'
                     placeholder='Enter Your Email Address'
-                    // onChangeText={(text) => console.log(text)}
                     inputStyle={{ marginBottom: responsiveHeight(3)}}
                     keyboardType='email-address'
                 />
                 <TextInputWithLabel 
                     label='Password'
                     placeholder='Enter Your Password'
-                    secureTextEntry={true}
+                    secureTextEntry={!isvisible}
+                    righticon={isvisible ? imagePath.ShowEye : imagePath.HideEye}
+                    onPressright={()=>SetIsvisible(!isvisible)}
                 />
+                <TouchableOpacity style={styles.forgotview} activeOpacity={(0.5)}>
+                    <Text style={styles.forgotText}>Forgot Password ?</Text>
+                </TouchableOpacity>
+             <ButtonComponent 
+             btnText={'LOGIN'}
+             onPress={()=>console.log('pressed')}
+             />
+            </View>
+            <View style={styles.notamember}>
+                <Text style={styles.notamembertext}>Not a Member ?</Text>
+                <TouchableOpacity  onPress={()=>navigation.navigate(navigationStrings.REGISTER)}>
+                    <Text style={styles.notamembertext1}>Join Now</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
