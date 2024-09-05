@@ -2,5 +2,7 @@ export default{
     ThemeColor:'#2a84bd',
     Black:'#000000',
     BlackOpacity:'#7e7f80',
-    White:'#ffffff'
+    White:'#ffffff',
+    Blue:'#b3d9ff',
+    RED:'#ff243a'
 }

@@ -1,36 +1,51 @@
-import { StyleSheet } from "react-native";
-import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
-import Colors from "../../Styles/Colors";
+import { StyleSheet } from 'react-native';
+import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
+import Colors from '../../Styles/Colors';
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1
+    container: {
+        flex: 1,
+        backgroundColor: Colors.BackgroundColor, // Adjust based on your theme
     },
-    title:{
-          marginVertical:responsiveHeight(5),
-          marginHorizontal:responsiveWidth(33),
+    innerContainer: {
+        flex: 1,
+        paddingHorizontal: responsiveWidth(4),
+        paddingVertical: responsiveHeight(2),
     },
-    titletext:{
-        fontSize:responsiveFontSize(4),
-        fontWeight:'600',
-        color:Colors.ThemeColor
+    title: {
+        marginVertical: responsiveHeight(5),
+        alignSelf: 'center',
     },
-    inputcontainer:{
-        marginVertical:responsiveHeight(5),
-        marginHorizontal:responsiveHeight(2)
+    titletext: {
+        fontSize: responsiveFontSize(4),
+        fontWeight: '600',
+        color: Colors.ThemeColor,
     },
-    alreadyhaveanacc:{
-        flexDirection:'row',
-        alignItems:'center',
-        marginHorizontal:responsiveHeight(11),
-        marginVertical:responsiveHeight(13)
+    inputcontainer: {
+        marginVertical: responsiveHeight(3),
     },
-    alreadyhaveanacctext:{
-        fontSize:responsiveFontSize(1.8)
+    buttonContainer: {
+        marginVertical: responsiveHeight(5),
+        alignItems: 'center',
     },
-    signintext:{
-        color:Colors.ThemeColor,
-        fontSize:responsiveFontSize(1.8)
+    alreadyhaveanacc: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginVertical: responsiveHeight(5),
     },
-})
+    alreadyhaveanacctext: {
+        fontSize: responsiveFontSize(1.8),
+    },
+    signintext: {
+        color: Colors.ThemeColor,
+        fontSize: responsiveFontSize(1.8),
+        marginLeft: 5,
+    },
+    scrollViewContainer: {
+        flexGrow: 1, // Ensure the content takes up the full height
+        justifyContent: 'center', // Center content vertically
+    },
+});
+
 export default styles;

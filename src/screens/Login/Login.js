@@ -37,7 +37,8 @@ const Login = ({ navigation }) => {
                 </TouchableOpacity>
              <ButtonComponent 
              btnText={'LOGIN'}
-             onPress={()=>console.log('pressed')}
+             onPress={()=>{
+                navigation.navigate(navigationStrings.HOMESTACK)}}
              />
             </View>
             <View style={styles.notamember}>
