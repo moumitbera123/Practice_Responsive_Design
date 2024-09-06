@@ -35,7 +35,7 @@ const Product = () => {
 
     return (
         <View style={styles.container}>
-            <SafeAreaView>
+            <SafeAreaView>  
                 <View style={styles.titlecontainer}>
                 <Text style={styles.header}>Products</Text>
                 </View>
