@@ -5,10 +5,13 @@ export default {
     CHOOSE_ACCOUNT: 'ChooseAccount',
     FORGOT_PASSWORD: 'ForgotPassword',
     SET_PASSWORD: 'SetPassword',
+
     HOME: 'Home',
-    HOMESTACK: 'HomeStack', // Update to match HomeStack component
-    TAB_ROUTES: 'TabRoutes', // Update to match TabRoutes component
+    HOMESTACK: 'HomeStack', 
+    TAB_ROUTES: 'TabRoutes', 
     BOOKING: 'Booking',
     PROFILE: 'Profile',
     PRODUCT: 'Product',
+
+    MODAL:'Modal'
 };

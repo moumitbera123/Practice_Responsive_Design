@@ -4,9 +4,12 @@ import React from 'react'
 import AuthStack from './src/Navigation/AuthStack'
 import Routes from './src/Navigation/Routes'
 
+import ModalScreen from './src/screens/Modal/ModalScreen'
+
 const App = () => {
   return (
     <Routes />
+  //  <ModalScreen/>
   )
 }
 

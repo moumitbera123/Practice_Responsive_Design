@@ -5,7 +5,7 @@ import HomeStack from './HomeStack';
 import navigationStrings from '../constants/navigationStrings';
 
 const Routes = () => {
-  const isLoggedIn = false; // Replace with your actual login state logic
+  const isLoggedIn = false;
 
   return (
     <NavigationContainer>

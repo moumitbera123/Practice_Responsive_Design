@@ -10,11 +10,14 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.White,
     },
     header: {
-        fontSize: responsiveHeight(4),
+        fontSize: responsiveHeight(3),
         fontWeight: 'bold',
         marginBottom: responsiveHeight(2),
         textAlign: 'center',
         color:Colors.ThemeColor
+    },
+    titlecontainer:{
+        alignSelf:'flex-start'
     },
     loadingContainer:{
         flex:1,

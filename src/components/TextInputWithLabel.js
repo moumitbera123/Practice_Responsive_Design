@@ -41,8 +41,8 @@ TextInputWithLabel.propTypes = {
 
 const styles = StyleSheet.create({
     inputContainer: {
-        borderBottomWidth: 1,
-        borderColor: '#b8bab9',
+        borderBottomWidth: 0.6,
+        borderColor: Colors.BlackOpacity,
         borderRadius: responsiveWidth(6),
         paddingHorizontal: responsiveWidth(6),
     },

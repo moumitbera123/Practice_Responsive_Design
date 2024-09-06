@@ -4,6 +4,7 @@ import React from 'react'
 import { createStackNavigator } from "@react-navigation/stack";
 import navigationStrings from "../constants/navigationStrings";
 import HomeStack from "./HomeStack";
+import ModalScreen from "../screens/Modal/ModalScreen";
 
 const AuthStack = () => {
   const Stack = createStackNavigator()
@@ -17,6 +18,7 @@ const AuthStack = () => {
       <Stack.Screen name={navigationStrings.SET_PASSWORD} component={SetPassword} />
       <Stack.Screen name={navigationStrings.REGISTER} component={Register} />
       <Stack.Screen name={navigationStrings.HOMESTACK} component={HomeStack}/>
+      <Stack.Screen name={navigationStrings.MODAL} component={ModalScreen}/>
     </Stack.Navigator>
 
   )
